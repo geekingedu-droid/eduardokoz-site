@@ -5,6 +5,7 @@
 // 1) PROJETOS EM VÍDEO (YouTube). id = código depois de "v=" ou "youtu.be/"
 const VIDEOS = [
   { id: "A4WgT0QOXhs", title: "The Weeknd: São Paulo Livestream", tag: "DIT · 2024" },
+  { id: "7SaKNpUIeBE", title: "Ogiva: O Mundo Não é Mais Nosso", tag: "Trailer · DIT" },
   { id: "bX9xa5xs1KY", title: "Case Alelo com Luan Santana", tag: "Publicidade · DIT" },
   { id: "G80Gvr4-Z5M", title: "Tônia, A Diva no Espelho", tag: "2021" },
   { id: "0jJakBm6q4Q", title: "Julio Secchin — Pra Que Ser Tão Normal", tag: "Clipe oficial" },
@@ -12,6 +13,7 @@ const VIDEOS = [
   { id: "6ZnDK-0y094", title: "Caio Nunez — Ancorar", tag: "#Hangar" },
   { id: "c8Kbv04-4L0", title: "Balé Dinossauro — Corpo e Alma", tag: "Clipe oficial" },
   { id: "kc0SZMyTEzQ", title: "Bryan Behr — Não Vejo a Hora", tag: "Acústico" },
+  { id: "_WfZiiHuBUo", title: "Roberta Sá — A Roda (Sambasá)", tag: "Ao vivo" },
   { id: "EG_RX0GdoiM", title: "DNA do Crime — Teaser oficial", tag: "Netflix · DIT" },
   // { id: "CODIGO", title: "Nome do projeto", tag: "Trailer" },
 ];
