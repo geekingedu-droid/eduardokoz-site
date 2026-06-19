@@ -90,12 +90,8 @@ const LINKS = [
   { label: "E-mail", url: "mailto:contato@eduardokoz.com" },
 ];
 
-// 5) STACK (marquee) — equipamento e ferramentas
-const TOOLS = [
-  "Arri Alexa 35", "Alexa Mini", "Alexa EV", "Sony Venice", "Venice II",
-  "Sony FX9", "FX6 / FX3", "RED V-Raptor", "RED Komodo", "RED Helium 8K",
-  "Blackmagic", "DaVinci Resolve", "Pomfort Livegrade", "Unreal Engine",
-];
+// 5) MARCAS (marquee de logos) — arquivos SVG em assets/brands/
+const BRANDS = ["sony", "red", "blackmagicdesign", "davinciresolve", "unrealengine", "netflix", "hbomax"];
 
 /* =========================================================================
    Renderização e interações — não precisa editar daqui pra baixo.
@@ -177,7 +173,9 @@ function renderLinks() {
 function renderMarquee() {
   const root = $("#marquee");
   if (!root) return;
-  const items = TOOLS.map((t) => `<span class="marquee__item">${esc(t)}</span>`).join("");
+  const items = BRANDS.map((b) =>
+    `<span class="marquee__brand" role="img" aria-label="${b}" style="--logo:url(assets/brands/${b}.svg)"></span>`
+  ).join("");
   root.innerHTML = items + items; // duplicado para loop contínuo
 }
 
