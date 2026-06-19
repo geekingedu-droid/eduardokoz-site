@@ -11,6 +11,7 @@ const VIDEOS = [
   { id: "f3z_pgQ4UkA", title: "Stuarts — Dreams Over", tag: "Clipe" },
   { id: "6ZnDK-0y094", title: "Caio Nunez — Ancorar", tag: "#Hangar" },
   { id: "c8Kbv04-4L0", title: "Balé Dinossauro — Corpo e Alma", tag: "Clipe oficial" },
+  { id: "kc0SZMyTEzQ", title: "Bryan Behr — Não Vejo a Hora", tag: "Acústico" },
   { id: "EG_RX0GdoiM", title: "DNA do Crime — Teaser oficial", tag: "Netflix · DIT" },
   // { id: "CODIGO", title: "Nome do projeto", tag: "Trailer" },
 ];
