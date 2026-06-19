@@ -18,6 +18,7 @@ const VIDEOS = [
   { id: "c8Kbv04-4L0", title: "Balé Dinossauro — Corpo e Alma", tag: "Clipe oficial" },
   { id: "kc0SZMyTEzQ", title: "Bryan Behr — Não Vejo a Hora", tag: "Acústico" },
   { id: "_WfZiiHuBUo", title: "Roberta Sá — A Roda (Sambasá)", tag: "Ao vivo" },
+  { id: "LCNlM08OnIs", title: "Falas de Orgulho — Flutua", tag: "Clipe · 2021" },
   { id: "EG_RX0GdoiM", title: "DNA do Crime — Teaser oficial", tag: "Netflix · DIT" },
   // { id: "CODIGO", title: "Nome do projeto", tag: "Trailer" },
 ];
