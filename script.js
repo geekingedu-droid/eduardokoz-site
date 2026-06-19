@@ -6,6 +6,7 @@
 const VIDEOS = [
   { id: "A4WgT0QOXhs", title: "The Weeknd: São Paulo Livestream", tag: "DIT · 2024" },
   { id: "7SaKNpUIeBE", title: "Ogiva: O Mundo Não é Mais Nosso", tag: "Trailer · DIT" },
+  { id: "wVqwoGwmR_I", title: "Caramelo", tag: "Trailer · Netflix · DIT" },
   { id: "bX9xa5xs1KY", title: "Case Alelo com Luan Santana", tag: "Publicidade · DIT" },
   { id: "G80Gvr4-Z5M", title: "Tônia, A Diva no Espelho", tag: "2021" },
   { id: "0jJakBm6q4Q", title: "Julio Secchin — Pra Que Ser Tão Normal", tag: "Clipe oficial" },
