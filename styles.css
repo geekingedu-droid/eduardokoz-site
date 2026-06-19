@@ -315,7 +315,7 @@ html[data-theme="dark"] .btn--primary { color: #04201f; }
 .prose strong { font-weight: 600; }
 .prose em { color: var(--brand-ink); font-style: normal; }
 
-.ekoz-logo { width: clamp(190px, 30vw, 270px); height: auto; display: block; margin-bottom: 30px; }
+.ekoz-logo { width: clamp(160px, 22vw, 210px); height: auto; display: block; margin: 12px 0 0; }
 html[data-theme="dark"] .ekoz-logo { filter: brightness(0) invert(1); }
 
 .ekoz-intro { font-size: 17px; color: var(--text); line-height: 1.6; max-width: 580px; margin: 0 0 30px; }
