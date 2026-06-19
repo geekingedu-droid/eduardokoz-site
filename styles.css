@@ -318,6 +318,21 @@ html[data-theme="dark"] .btn--primary { color: #04201f; }
 .ekoz-logo { width: clamp(190px, 30vw, 270px); height: auto; display: block; margin-bottom: 30px; }
 html[data-theme="dark"] .ekoz-logo { filter: brightness(0) invert(1); }
 
+.ekoz-intro { font-size: 17px; color: var(--text); line-height: 1.6; max-width: 640px; margin: 0 0 32px; }
+.ekoz-intro strong { font-weight: 600; }
+.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-bottom: 32px; }
+.service {
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s;
+}
+.service:hover { border-color: var(--brand); transform: translateY(-3px); box-shadow: var(--shadow); }
+.service h3 { margin: 0 0 12px; font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+.service h3 span { display: block; font-size: 12px; font-weight: 600; color: var(--brand-ink); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 5px; }
+.service p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+
 /* =========================== VÍDEOS =========================== */
 .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 22px; }
 .video { display: flex; flex-direction: column; }
