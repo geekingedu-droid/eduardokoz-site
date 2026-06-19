@@ -8,6 +8,7 @@ const VIDEOS = [
   { id: "7SaKNpUIeBE", title: "Ogiva: O Mundo Não é Mais Nosso", tag: "Trailer · DIT" },
   { id: "wVqwoGwmR_I", title: "Caramelo", tag: "Trailer · Netflix · DIT" },
   { id: "zBlSoB8dsL0", title: "Os Farofeiros 2", tag: "Trailer · 2024" },
+  { id: "jKZshDw6HUY", title: "Kasa Branca", tag: "Trailer · DIT · Festival do Rio" },
   { id: "5DA2O8qc-DI", title: "Eu Sou Maria", tag: "Trailer oficial" },
   { id: "bX9xa5xs1KY", title: "Case Alelo com Luan Santana", tag: "Publicidade · DIT" },
   { id: "G80Gvr4-Z5M", title: "Tônia, A Diva no Espelho", tag: "2021" },
