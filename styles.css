@@ -318,18 +318,8 @@ html[data-theme="dark"] .btn--primary { color: #04201f; }
 .ekoz-logo { width: clamp(190px, 30vw, 270px); height: auto; display: block; margin-bottom: 30px; }
 html[data-theme="dark"] .ekoz-logo { filter: brightness(0) invert(1); }
 
-.ekoz-intro { font-size: 17px; color: var(--text); line-height: 1.6; max-width: 560px; margin: 0 0 26px; }
+.ekoz-intro { font-size: 17px; color: var(--text); line-height: 1.6; max-width: 580px; margin: 0 0 30px; }
 .ekoz-intro strong { font-weight: 600; }
-.tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
-.tag {
-  padding: 9px 18px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text);
-  background: var(--surface);
-}
 
 /* =========================== VÍDEOS =========================== */
 .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 22px; }
