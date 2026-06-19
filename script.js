@@ -12,6 +12,7 @@ const VIDEOS = [
   { id: "Ujh52JjdViw", title: "Amar é para os Fortes", tag: "Teaser · Prime Video" },
   { id: "3CS9Qj-T9is", title: "Caravana das Drags", tag: "Trailer · Prime Video" },
   { id: "bqNEizJJzKQ", title: "Dona Beja", tag: "Trailer · HBO Max" },
+  { id: "GE2jLGrN5Ss", title: "Vestidas de Amor", tag: "Série · Globoplay" },
   { id: "0jJakBm6q4Q", title: "Julio Secchin — Pra Que Ser Tão Normal", tag: "Clipe oficial" },
   { id: "f3z_pgQ4UkA", title: "Stuarts — Dreams Over", tag: "Clipe" },
   { id: "6ZnDK-0y094", title: "Caio Nunez — Ancorar", tag: "#Hangar" },
