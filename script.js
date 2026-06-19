@@ -91,7 +91,10 @@ const LINKS = [
 ];
 
 // 5) MARCAS (marquee de logos) — arquivos SVG em assets/brands/
-const BRANDS = ["sony", "red", "blackmagicdesign", "davinciresolve", "unrealengine", "netflix", "hbomax"];
+const BRANDS = [
+  "sony", "red", "blackmagicdesign", "panasonic", "dji", "apple",
+  "nvidia", "davinciresolve", "unrealengine", "netflix", "hbomax",
+];
 
 /* =========================================================================
    Renderização e interações — não precisa editar daqui pra baixo.
