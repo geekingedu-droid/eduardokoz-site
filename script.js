@@ -179,7 +179,7 @@ function renderMarquee() {
   const root = $("#marquee");
   if (!root) return;
   const items = BRANDS.map((b) =>
-    `<span class="marquee__brand" role="img" aria-label="${b}" style="--logo:url(assets/brands/${b}.svg)"></span>`
+    `<span class="marquee__brand${b === "arri" ? " marquee__brand--arri" : ""}" role="img" aria-label="${b}" style="--logo:url(assets/brands/${b}.svg)"></span>`
   ).join("");
   root.innerHTML = items + items; // duplicado para loop contínuo
 }
