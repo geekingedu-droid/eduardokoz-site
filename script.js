@@ -65,7 +65,7 @@ const CREDITS = [
   { year: "2024", title: "A Cerca", role: "Data Manager" },
   { year: "2024", title: "Ogiva: O Mundo Não é Mais Nosso", role: "DIT" },
   { year: "2024", title: "Kasa Branca", role: "DIT · Melhor Fotografia no Festival do Rio + diversos prêmios" },
-  { year: "2024", title: "The Weeknd: São Paulo Livestream", role: "DIT · TV Movie" },
+  { year: "2024", title: "The Weeknd: São Paulo Livestream", role: "DIT · Livestream YouTube" },
   { year: "2024", title: "Desperate Lies", role: "Data Management Technician · Minissérie" },
   { year: "2024", title: "Os Farofeiros 2", role: "Data Manager" },
   { year: "2023", title: "A Vampire in the Family", role: "Data Manager" },
