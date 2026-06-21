@@ -59,6 +59,7 @@ const CREDITS = [
   { year: "—",   title: "Os Farofeiros 3", role: "Data Manager" },
   { year: "2025", title: "Caramelo", role: "DIT · 2ª unidade" },
   { year: "2025", title: "Vini Jr.", role: "Data Management Technician" },
+  { year: "2024", title: "GNT Vamos Combinar — Renner", role: "DIT · Publicidade" },
   { year: "2024", title: "City of God: The Fight Rages On", role: "Data Management Technician · 2ª unidade" },
   { year: "2024", title: "A Cerca", role: "Data Manager" },
   { year: "2024", title: "Ogiva: O Mundo Não é Mais Nosso", role: "DIT" },
