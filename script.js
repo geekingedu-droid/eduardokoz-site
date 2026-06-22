@@ -223,13 +223,18 @@ function initTheme() {
 // Revelação no scroll
 function initReveal() {
   const els = document.querySelectorAll(".reveal:not(.is-in)");
-  if (!("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("is-in")); return; }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((en) => {
-      if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
-    });
-  }, { rootMargin: "0px 0px - 10% 0px", threshold: 0.1 });
-  els.forEach((e) => io.observe(e));
+  const revealAll = () => els.forEach((e) => e.classList.add("is-in"));
+  if (!("IntersectionObserver" in window)) { revealAll(); return; }
+  try {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.1 });
+    els.forEach((e) => io.observe(e));
+  } catch (e) {
+    revealAll(); // se o observer falhar, mostra tudo em vez de deixar a página invisível
+  }
 }
 
 // Barra de progresso + nav scrolled (throttle com rAF)
