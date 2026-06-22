@@ -286,7 +286,7 @@ html[data-theme="dark"] .btn--primary { color: #04201f; }
   opacity: 0.7;
   transition: opacity 0.25s, background 0.25s;
 }
-.marquee__brand--arri { width: 142px; height: 46px; opacity: 0.85; }
+.marquee__brand--arri { width: 114px; height: 37px; opacity: 0.85; }
 .marquee__brand:hover { opacity: 1; background: var(--brand); }
 @keyframes scrollx { to { transform: translateX(-50%); } }
 
