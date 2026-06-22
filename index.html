@@ -43,7 +43,7 @@
       <nav class="nav__links">
         <a href="#sobre">Sobre</a>
         <a href="#ekoz">Ekoz Tech</a>
-        <a href="#projetos">Projetos</a>
+        <a href="projetos.html">Projetos</a>
         <a href="#bastidores">Bastidores</a>
         <a href="#filmografia">Filmografia</a>
         <a href="#links">Links</a>
@@ -136,23 +136,11 @@
       </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="section">
-      <div class="wrap">
-        <div class="section__title reveal">
-          <span class="section__num">03</span>
-          <h2>Projetos em vídeo</h2>
-          <p>Trailers e registros no YouTube.</p>
-        </div>
-        <div id="videos" class="videos"></div>
-      </div>
-    </section>
-
     <!-- BASTIDORES -->
     <section id="bastidores" class="section section--alt">
       <div class="wrap">
         <div class="section__title reveal">
-          <span class="section__num">04</span>
+          <span class="section__num">03</span>
           <h2>Bastidores</h2>
           <p>DIT em set: equipamento, workflow e estação de trabalho.</p>
         </div>
@@ -164,7 +152,7 @@
     <section id="filmografia" class="section">
       <div class="wrap">
         <div class="section__title reveal">
-          <span class="section__num">05</span>
+          <span class="section__num">04</span>
           <h2>Filmografia</h2>
           <p>
             Créditos no audiovisual.
@@ -179,7 +167,7 @@
     <section id="links" class="section section--alt">
       <div class="wrap">
         <div class="section__title reveal">
-          <span class="section__num">06</span>
+          <span class="section__num">05</span>
           <h2>Links</h2>
         </div>
         <div id="links-grid" class="links"></div>
@@ -196,7 +184,10 @@
 
   <div id="lightbox" class="lightbox" hidden>
     <button class="lightbox__close" aria-label="Fechar">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Foto anterior">&#8249;</button>
     <img class="lightbox__img" src="" alt="" />
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Próxima foto">&#8250;</button>
+    <span class="lightbox__count"></span>
   </div>
 
   <script src="script.js"></script>

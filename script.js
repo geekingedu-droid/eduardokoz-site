@@ -132,27 +132,48 @@ function renderVideos() {
 function renderGallery() {
   const root = $("#gallery");
   if (!root) return;
-  root.innerHTML = GALLERY.map((g) => `
-    <a class="gallery__item" href="${g.src}" data-full="${g.src}" aria-label="Ampliar imagem">
+  root.innerHTML = GALLERY.map((g, i) => `
+    <button class="gallery__item" type="button" data-i="${i}" aria-label="Ampliar: ${esc(g.alt)}">
       <img loading="lazy" src="${g.src}" alt="${esc(g.alt)}" />
-    </a>`).join("");
+    </button>`).join("");
 
   const box = $("#lightbox");
-  const boxImg = box.querySelector(".lightbox__img");
-  const close = () => { box.hidden = true; boxImg.src = ""; document.body.style.overflow = ""; };
-  root.querySelectorAll(".gallery__item").forEach((a) => {
-    a.addEventListener("click", (e) => {
-      e.preventDefault();
-      boxImg.src = a.dataset.full;
-      boxImg.alt = a.querySelector("img").alt;
-      box.hidden = false;
-      document.body.style.overflow = "hidden";
-    });
+  if (!box) return;
+  const img = box.querySelector(".lightbox__img");
+  const count = box.querySelector(".lightbox__count");
+  let cur = 0;
+
+  const show = (i) => {
+    cur = (i + GALLERY.length) % GALLERY.length;
+    img.src = GALLERY[cur].src;
+    img.alt = GALLERY[cur].alt;
+    if (count) count.textContent = `${cur + 1} / ${GALLERY.length}`;
+  };
+  const open = (i) => { show(i); box.hidden = false; document.body.style.overflow = "hidden"; };
+  const close = () => { box.hidden = true; img.src = ""; document.body.style.overflow = ""; };
+
+  root.querySelectorAll(".gallery__item").forEach((b) =>
+    b.addEventListener("click", () => open(+b.dataset.i)));
+  box.querySelector(".lightbox__close").addEventListener("click", close);
+  box.querySelector(".lightbox__nav--prev").addEventListener("click", (e) => { e.stopPropagation(); show(cur - 1); });
+  box.querySelector(".lightbox__nav--next").addEventListener("click", (e) => { e.stopPropagation(); show(cur + 1); });
+  box.addEventListener("click", (e) => { if (e.target === box) close(); });
+  document.addEventListener("keydown", (e) => {
+    if (box.hidden) return;
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowLeft") show(cur - 1);
+    else if (e.key === "ArrowRight") show(cur + 1);
   });
-  box.addEventListener("click", (e) => {
-    if (e.target === box || e.target.classList.contains("lightbox__close")) close();
-  });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !box.hidden) close(); });
+
+  // swipe no celular
+  let x0 = null;
+  box.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener("touchend", (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 45) show(dx < 0 ? cur + 1 : cur - 1);
+    x0 = null;
+  }, { passive: true });
 }
 
 function renderCredits() {
