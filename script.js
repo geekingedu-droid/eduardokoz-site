@@ -73,7 +73,7 @@ const CREDITS = [
   { year: "2023", title: "Eu Sou Maria", role: "Data Management Technician" },
   { year: "2023", title: "Impuros", role: "Video Assist Operator · Série (10 ep.)" },
   { year: "2023", title: "Rich in Love 2", role: "Video Assist Operator" },
-  { year: "2023", title: "Queens on the Run", role: "Data / Media Manager · Série (7 ep.)" },
+  { year: "2023", title: "Queens on the Run", role: "Data Management Technician · Série (7 ep.)" },
   { year: "2023", title: "Vestidas de Amor", role: "Data Management Technician · Série" },
   { year: "2022", title: "Família Paraíso", role: "Data Management Technician · Série" },
   { year: "2021", title: "Falas de Orgulho", role: "Assistente de Câmera · TV Special" },
