@@ -154,9 +154,9 @@ function renderGallery() {
 
   root.querySelectorAll(".gallery__item").forEach((b) =>
     b.addEventListener("click", () => open(+b.dataset.i)));
-  box.querySelector(".lightbox__close").addEventListener("click", close);
-  box.querySelector(".lightbox__nav--prev").addEventListener("click", (e) => { e.stopPropagation(); show(cur - 1); });
-  box.querySelector(".lightbox__nav--next").addEventListener("click", (e) => { e.stopPropagation(); show(cur + 1); });
+  box.querySelector(".lightbox__close")?.addEventListener("click", close);
+  box.querySelector(".lightbox__nav--prev")?.addEventListener("click", (e) => { e.stopPropagation(); show(cur - 1); });
+  box.querySelector(".lightbox__nav--next")?.addEventListener("click", (e) => { e.stopPropagation(); show(cur + 1); });
   box.addEventListener("click", (e) => { if (e.target === box) close(); });
   document.addEventListener("keydown", (e) => {
     if (box.hidden) return;
@@ -251,14 +251,10 @@ function initScroll() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderVideos();
-  renderGallery();
-  renderCredits();
-  renderLinks();
-  renderMarquee();
-  initTheme();
-  initScroll();
-  initReveal();
+  // cada passo isolado: um erro não pode travar os demais (nem deixar a página invisível)
+  const safe = (fn) => { try { fn(); } catch (e) { console.error(e); } };
+  [renderVideos, renderGallery, renderCredits, renderLinks, renderMarquee,
+   initTheme, initScroll, initReveal].forEach(safe);
   const y = $("#year");
   if (y) y.textContent = new Date().getFullYear();
 });
