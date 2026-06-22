@@ -106,11 +106,58 @@ const $ = (s, r = document) => r.querySelector(s);
 const ytThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+// Menu + rodapé compartilhados (edite só aqui; valem para todas as páginas)
+const NAV = [
+  { label: "Sobre", hash: "#sobre" },
+  { label: "Ekoz Tech", hash: "#ekoz" },
+  { label: "Projetos", page: "projetos.html" },
+  { label: "Bastidores", page: "bastidores.html" },
+  { label: "Filmografia", page: "filmografia.html" },
+  { label: "Links", hash: "#links" },
+];
+
+const SUN = '<svg class="ico ico--sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+const MOON = '<svg class="ico ico--moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>';
+
+function renderChrome() {
+  const page = location.pathname.split("/").pop() || "index.html";
+  const home = page === "" || page === "index.html";
+
+  const links = NAV.map((it) => {
+    let href, active = false;
+    if (it.page) { href = it.page; active = page === it.page; }
+    else { href = home ? it.hash : "index.html" + it.hash; }
+    return `<a href="${href}"${active ? ' aria-current="page"' : ""}>${it.label}</a>`;
+  }).join("");
+
+  const nav = $("#nav");
+  if (nav) {
+    nav.innerHTML = `
+      <div class="wrap nav__inner">
+        <a class="nav__brand" href="${home ? "#top" : "index.html"}" aria-label="Início">
+          <img src="assets/ekoz-symbol.png" alt="" class="nav__mark" />
+          <span>Eduardo Kozlowski</span>
+        </a>
+        <nav class="nav__links">${links}</nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">${SUN}${MOON}</button>
+      </div>`;
+  }
+
+  const foot = $("#site-footer");
+  if (foot) {
+    foot.innerHTML = `
+      <div class="wrap footer__inner">
+        <span>© <span id="year"></span> Eduardo Kozlowski · Ekoz Tech</span>
+        <a href="mailto:contato@eduardokoz.com">contato@eduardokoz.com</a>
+      </div>`;
+  }
+}
+
 function renderVideos() {
   const root = $("#videos");
   if (!root) return;
   root.innerHTML = VIDEOS.map((v, i) => `
-    <div class="video reveal" style="--d:${i}">
+    <div class="video reveal tilt" style="--d:${i}">
       <div class="video__frame" data-id="${esc(v.id)}">
         <img loading="lazy" src="${ytThumb(v.id)}" alt="${esc(v.title)}" />
         <div class="video__play" role="button" aria-label="Reproduzir ${esc(v.title)}"></div>
@@ -192,7 +239,7 @@ function renderLinks() {
   if (!root) return;
   root.innerHTML = LINKS.map((l) => {
     const ext = l.url.startsWith("http") ? 'target="_blank" rel="noopener"' : "";
-    return `<a class="link" href="${l.url}" ${ext}>${esc(l.label)} <span class="link__arrow">↗</span></a>`;
+    return `<a class="link tilt" href="${l.url}" ${ext}>${esc(l.label)} <span class="link__arrow">↗</span></a>`;
   }).join("");
 }
 
@@ -255,11 +302,43 @@ function initScroll() {
   update();
 }
 
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Parallax do brilho do hero seguindo o mouse (profundidade futurista)
+function initParallax() {
+  const aura = $(".hero__aura");
+  if (!aura || reduceMotion()) return;
+  let raf = null, cx = 0, cy = 0;
+  window.addEventListener("mousemove", (e) => {
+    cx = e.clientX / window.innerWidth - 0.5;
+    cy = e.clientY / window.innerHeight - 0.5;
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      aura.style.transform = `translate3d(${(cx * 28).toFixed(1)}px, ${(cy * 28).toFixed(1)}px, 0)`;
+      raf = null;
+    });
+  }, { passive: true });
+}
+
+// Tilt 3D nos cards (.tilt) acompanhando o cursor — só desktop, sem reduced-motion
+function initTilt() {
+  if (reduceMotion() || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  document.querySelectorAll(".tilt").forEach((el) => {
+    el.addEventListener("pointermove", (e) => {
+      const r = el.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      el.style.transform = `perspective(720px) rotateX(${(-py * 5).toFixed(2)}deg) rotateY(${(px * 5).toFixed(2)}deg) translateY(-4px)`;
+    });
+    el.addEventListener("pointerleave", () => { el.style.transform = ""; });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // cada passo isolado: um erro não pode travar os demais (nem deixar a página invisível)
   const safe = (fn) => { try { fn(); } catch (e) { console.error(e); } };
-  [renderVideos, renderGallery, renderCredits, renderLinks, renderMarquee,
-   initTheme, initScroll, initReveal].forEach(safe);
+  [renderChrome, renderVideos, renderGallery, renderCredits, renderLinks, renderMarquee,
+   initTheme, initScroll, initReveal, initParallax, initTilt].forEach(safe);
   const y = $("#year");
   if (y) y.textContent = new Date().getFullYear();
 });
