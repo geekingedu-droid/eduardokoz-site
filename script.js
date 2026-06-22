@@ -1,5 +1,5 @@
 /* =========================================================================
-   CONTEÚDO — edite somente este bloco.
+   CONTEÚDO - edite somente este bloco.
    ========================================================================= */
 
 // 1) PROJETOS EM VÍDEO (YouTube). id = código depois de "v=" ou "youtu.be/"
@@ -11,29 +11,29 @@ const VIDEOS = [
   { id: "jKZshDw6HUY", title: "Kasa Branca", tag: "Trailer · DIT · Festival do Rio" },
   { id: "5DA2O8qc-DI", title: "Eu Sou Maria", tag: "Trailer oficial · DIT" },
   { id: "bX9xa5xs1KY", title: "Case Alelo com Luan Santana", tag: "Publicidade · DIT" },
-  { id: "EuLU7fRfOjg", title: "GNT Vamos Combinar — Renner", tag: "Programa · GNT/Globoplay · DIT · Data Management Technician" },
+  { id: "EuLU7fRfOjg", title: "GNT Vamos Combinar - Renner", tag: "Programa · GNT/Globoplay · DIT · Data Management Technician" },
   { id: "G80Gvr4-Z5M", title: "Tônia, A Diva no Espelho", tag: "2021" },
   { id: "Ujh52JjdViw", title: "Amar é para os Fortes", tag: "Teaser · Prime Video" },
   { id: "3CS9Qj-T9is", title: "Caravana das Drags", tag: "Trailer · Prime Video" },
   { id: "bqNEizJJzKQ", title: "Dona Beja", tag: "Trailer · HBO Max" },
   { id: "GE2jLGrN5Ss", title: "Vestidas de Amor", tag: "Série · Globoplay" },
-  { id: "0jJakBm6q4Q", title: "Julio Secchin — Pra Que Ser Tão Normal", tag: "Clipe oficial" },
-  { id: "f3z_pgQ4UkA", title: "Stuarts — Dreams Over", tag: "Clipe" },
-  { id: "6ZnDK-0y094", title: "Caio Nunez — Ancorar", tag: "#Hangar" },
-  { id: "c8Kbv04-4L0", title: "Balé Dinossauro — Corpo e Alma", tag: "Clipe oficial" },
-  { id: "kc0SZMyTEzQ", title: "Bryan Behr — Não Vejo a Hora", tag: "Acústico" },
-  { id: "_WfZiiHuBUo", title: "Roberta Sá — A Roda (Sambasá)", tag: "Ao vivo" },
-  { id: "LCNlM08OnIs", title: "Falas de Orgulho — Flutua", tag: "Clipe · 2021" },
-  { id: "EG_RX0GdoiM", title: "DNA do Crime — Teaser oficial", tag: "Netflix · Data Management Technician (3ª Temporada · Unidade 01)" },
+  { id: "0jJakBm6q4Q", title: "Julio Secchin - Pra Que Ser Tão Normal", tag: "Clipe oficial" },
+  { id: "f3z_pgQ4UkA", title: "Stuarts - Dreams Over", tag: "Clipe" },
+  { id: "6ZnDK-0y094", title: "Caio Nunez - Ancorar", tag: "#Hangar" },
+  { id: "c8Kbv04-4L0", title: "Balé Dinossauro - Corpo e Alma", tag: "Clipe oficial" },
+  { id: "kc0SZMyTEzQ", title: "Bryan Behr - Não Vejo a Hora", tag: "Acústico" },
+  { id: "_WfZiiHuBUo", title: "Roberta Sá - A Roda (Sambasá)", tag: "Ao vivo" },
+  { id: "LCNlM08OnIs", title: "Falas de Orgulho - Flutua", tag: "Clipe · 2021" },
+  { id: "EG_RX0GdoiM", title: "DNA do Crime - Teaser oficial", tag: "Netflix · Data Management Technician (3ª Temporada · Unidade 01)" },
   // { id: "CODIGO", title: "Nome do projeto", tag: "Trailer" },
 ];
 
-// 2) BASTIDORES (galeria) — arquivos em assets/gallery/
+// 2) BASTIDORES (galeria) - arquivos em assets/gallery/
 const GALLERY = [
   { src: "assets/gallery/g01.jpg", alt: "DIT em produção virtual (LED volume)" },
   { src: "assets/gallery/g02.jpg", alt: "Equipamento KOZ DIT" },
   { src: "assets/gallery/g03.jpg", alt: "DIT cart em locação ao anoitecer" },
-  { src: "assets/gallery/g04.jpg", alt: "Virtual Production — parede de LED" },
+  { src: "assets/gallery/g04.jpg", alt: "Parede de LED em Virtual Production" },
   { src: "assets/gallery/g05.jpg", alt: "Color e data management em workflow noturno" },
   { src: "assets/gallery/g06.jpg", alt: "Bastidores de filmagem ao entardecer" },
   { src: "assets/gallery/g07.jpg", alt: "Estação de DIT com monitores de referência" },
@@ -52,7 +52,7 @@ const GALLERY = [
   { src: "assets/gallery/g33.jpg", alt: "Equipe de câmera em movimento" },
 ];
 
-// 3) FILMOGRAFIA (IMDb) — mais recente primeiro
+// 3) FILMOGRAFIA (IMDb) - mais recente primeiro
 const CREDITS = [
   { year: "2027", title: "DNA do Crime (3ª Temporada)", role: "Data Management Technician · Netflix" },
   { year: "2026", title: "Fúria", role: "Data Management Technician · Série Netflix · estreia jul" },
@@ -60,7 +60,7 @@ const CREDITS = [
   { year: "2026", title: "Os Farofeiros 3", role: "Data Management Technician" },
   { year: "2025", title: "Caramelo", role: "DIT · 2ª unidade" },
   { year: "2025", title: "Vini Jr.", role: "Data Management Technician (extra) · Documentário · Netflix" },
-  { year: "2024", title: "GNT Vamos Combinar — Renner", role: "DIT · Data Management Technician · Cloud Upload · Programa GNT/Globoplay" },
+  { year: "2024", title: "GNT Vamos Combinar - Renner", role: "DIT · Data Management Technician · Cloud Upload · Programa GNT/Globoplay" },
   { year: "2024", title: "City of God: The Fight Rages On", role: "Data Management Technician · 2ª unidade" },
   { year: "2024", title: "A Cerca", role: "Data Management Technician" },
   { year: "2024", title: "Ogiva: O Mundo Não é Mais Nosso", role: "DIT" },
@@ -83,8 +83,8 @@ const CREDITS = [
 
 // 4) LINKS ÚTEIS
 const LINKS = [
-  { label: "Instagram — pessoal", url: "https://www.instagram.com/edukoz_/" },
-  { label: "Instagram — Ekoz Tech", url: "https://www.instagram.com/ekoz.tech/" },
+  { label: "Instagram pessoal", url: "https://www.instagram.com/edukoz_/" },
+  { label: "Instagram Ekoz Tech", url: "https://www.instagram.com/ekoz.tech/" },
   { label: "LinkedIn", url: "https://www.linkedin.com/in/eduardo-kozlowski-293a231a4" },
   { label: "IMDb", url: "https://www.imdb.com/name/nm12542369/" },
   { label: "BRLISTAS", url: "https://brlistas.com" },
@@ -92,14 +92,14 @@ const LINKS = [
   { label: "E-mail", url: "mailto:contato@eduardokoz.com" },
 ];
 
-// 5) MARCAS (marquee de logos) — arquivos SVG em assets/brands/
+// 5) MARCAS (marquee de logos) - arquivos SVG em assets/brands/
 const BRANDS = [
   "sony", "red", "arri", "blackmagicdesign", "panasonic", "dji", "apple",
   "nvidia", "pomfort", "davinciresolve", "unrealengine", "netflix", "hbomax",
 ];
 
 /* =========================================================================
-   Renderização e interações — não precisa editar daqui pra baixo.
+   Renderização e interações - não precisa editar daqui pra baixo.
    ========================================================================= */
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -207,7 +207,7 @@ function initReveal() {
     entries.forEach((en) => {
       if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
     });
-  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.1 });
+  }, { rootMargin: "0px 0px - 10% 0px", threshold: 0.1 });
   els.forEach((e) => io.observe(e));
 }
 
