@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos · Eduardo Kozlowski</title>
-  <meta name="description" content="Projetos em vídeo de Eduardo Kozlowski: trailers e registros de séries, longas e publicidade." />
+  <title>Bastidores · Eduardo Kozlowski</title>
+  <meta name="description" content="Bastidores de Eduardo Kozlowski: DIT em set, equipamento, workflow e estação de trabalho." />
   <meta name="theme-color" content="#ffffff" />
 
   <script>
@@ -37,8 +37,8 @@
       <nav class="nav__links">
         <a href="index.html#sobre">Sobre</a>
         <a href="index.html#ekoz">Ekoz Tech</a>
-        <a href="projetos.html" aria-current="page">Projetos</a>
-        <a href="bastidores.html">Bastidores</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="bastidores.html" aria-current="page">Bastidores</a>
         <a href="filmografia.html">Filmografia</a>
         <a href="index.html#links">Links</a>
       </nav>
@@ -52,17 +52,17 @@
   <main>
     <section class="section page-head">
       <div class="wrap">
-        <p class="hero__eyebrow reveal">Portfólio</p>
-        <h1 class="page-head__title reveal" style="--d:1">Projetos<span class="hero__dot">.</span></h1>
+        <p class="hero__eyebrow reveal">Bastidores</p>
+        <h1 class="page-head__title reveal" style="--d:1">Bastidores<span class="hero__dot">.</span></h1>
         <p class="page-head__lead reveal" style="--d:2">
-          Trailers e registros de séries, longas, publicidade e shows em que trabalhei.
+          DIT em set: equipamento, workflow e estação de trabalho.
         </p>
       </div>
     </section>
 
     <section class="section section--alt">
       <div class="wrap">
-        <div id="videos" class="videos"></div>
+        <div id="gallery" class="gallery"></div>
       </div>
     </section>
   </main>
@@ -73,6 +73,14 @@
       <a href="mailto:contato@eduardokoz.com">contato@eduardokoz.com</a>
     </div>
   </footer>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Fechar">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Foto anterior">&#8249;</button>
+    <img class="lightbox__img" src="" alt="" />
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Próxima foto">&#8250;</button>
+    <span class="lightbox__count"></span>
+  </div>
 
   <script src="script.js"></script>
 </body>
