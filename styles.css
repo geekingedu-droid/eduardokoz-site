@@ -293,6 +293,8 @@ html[data-theme="dark"] .btn--primary { color: #04201f; }
 /* =========================== SECTIONS =========================== */
 .section { position: relative; z-index: 2; padding: var(--space) 0; }
 .section--alt { background: var(--bg-alt); }
+/* linha ciano dividindo seções (separador visível nos dois temas) */
+.section + .section { border-top: 1px solid color-mix(in srgb, var(--brand) 38%, transparent); }
 .section__grid { display: grid; grid-template-columns: 240px 1fr; gap: 56px; }
 .section__num {
   display: inline-block;
