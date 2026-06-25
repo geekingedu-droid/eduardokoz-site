@@ -32,12 +32,16 @@ const VIDEOS = [
 // 2) BASTIDORES (galeria) - arquivos em assets/gallery/
 const GALLERY = [
   { src: "assets/gallery/g01.jpg", alt: "DIT em produção virtual (LED volume)" },
+  { src: "assets/gallery/g34.jpg", alt: "Eduardo Kozlowski em set" },
+  { src: "assets/gallery/g35.jpg", alt: "DIT na monitoração on-set" },
   { src: "assets/gallery/g02.jpg", alt: "Equipamento KOZ DIT" },
   { src: "assets/gallery/g03.jpg", alt: "DIT cart em locação ao anoitecer" },
   { src: "assets/gallery/g04.jpg", alt: "Parede de LED em Virtual Production" },
   { src: "assets/gallery/g05.jpg", alt: "Color e data management em workflow noturno" },
   { src: "assets/gallery/g06.jpg", alt: "Bastidores de filmagem ao entardecer" },
   { src: "assets/gallery/g07.jpg", alt: "Estação de DIT com monitores de referência" },
+  { src: "assets/gallery/g36.jpg", alt: "Bastidores em set externo" },
+  { src: "assets/gallery/g37.jpg", alt: "Monitoração multi-câmeras" },
   { src: "assets/gallery/g09.jpg", alt: "Equipe de câmera em locação urbana" },
   { src: "assets/gallery/g10.jpg", alt: "Operação de câmera em estúdio" },
   { src: "assets/gallery/g11.jpg", alt: "Monitoração on-set em evento ao vivo" },
