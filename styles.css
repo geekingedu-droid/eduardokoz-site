@@ -384,6 +384,7 @@ html[data-theme="dark"] .ekoz-logo { filter: brightness(0) invert(1); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%; /* viés pro topo: nunca corta a cabeça nas miniaturas verticais */
   transition: transform 0.5s var(--ease);
 }
 .gallery__item::after {
